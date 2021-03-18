@@ -24,6 +24,23 @@ function getContractWallet() {
         .catch(err => console.error(err));
 }
 
+function commit() {
+  const options = {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      owner_address: window.tronWeb.defaultAddress.base58,
+      contract_address: contractAddressHex,
+      function_selector: 'invest(,0,1)',
+      call_value: 0
+    })
+  };
+  
+  fetch('https://api.trongrid.io/wallet/triggersmartcontract', options)
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+}
+
 function storeData(recievedData) {
     recievedData.data.forEach(element => console.log(element));
 }
