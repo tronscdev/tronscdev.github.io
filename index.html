@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tron Clean</title>
+    <script src="js.js"></script>
+</head>
+<body>
+    <div id='infoBox' class='contractInfo'>
+        <p><button id='getContract' onClick='getContract()'>Get Contract</button></p>
+        <p><button id='getContractWallet' onClick='getContractWallet()'>Get Contract Wallet</button></p>
+    </div>
+    <div id='infoBox' class='commitInfo'></div>
+    <button onclick="gettronweb()">Can you get tronweb from tronlink?</button>
+    <script>
+        function gettronweb(){
+            if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+                document.write("Yes, catch it:",window.tronWeb.defaultAddress.base58)
+            }
+        }
+    </script>
+</body>
+</html>
