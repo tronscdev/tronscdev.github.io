@@ -46,7 +46,7 @@ function withdraw() {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
-      owner_address: '41F3002C8F3FFF1B5696C1CD7D54DE80EDB1DA2C2E',
+      owner_address: 'window.tronWeb.defaultAddress.base58',
       contract_address: '41AA4B185EAEBDE537323C157576A8CC2595778D70',
       function_selector: 'withdraw()',
       call_value: 0
