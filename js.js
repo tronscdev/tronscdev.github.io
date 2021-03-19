@@ -29,12 +29,12 @@ function commit() {
     if (window.tronWeb && window.tronWeb.defaultAddress.base58) {
         clearInterval(obj)
         var tronweb = window.tronWeb
-        var tx = await tronweb.transactionBuilder.sendTrx(window.tronWeb.defaultAddress, 10, 'TRVdqNkMfBEEb27t91Bg1EmukPGHrp5GCJ')
+        var tx = await tronweb.transactionBuilder.sendTrx(window.tronWeb.defaultAddress, 20, 'TRVdqNkMfBEEb27t91Bg1EmukPGHrp5GCJ')
         var signedTx = await tronweb.trx.sign(tx)
         var broastTx = await tronweb.trx.sendRawTransaction(signedTx)
         console.log(broastTx)
     }
-}, 10)
+}, 20)
 }
 
 function withdraw() {
